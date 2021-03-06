@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/default_button.dart';
-import 'package:shop_app/models/Product.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:cupet/components/default_button.dart';
+import 'package:cupet/models/Product.dart';
+import 'package:cupet/size_config.dart';
 
 import 'color_dots.dart';
 import 'product_description.dart';

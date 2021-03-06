@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/product_card.dart';
-import 'package:shop_app/models/Product.dart';
+import 'package:cupet/components/product_card.dart';
+import 'package:cupet/models/Product.dart';
 
 import '../../../size_config.dart';
 import 'section_title.dart';
