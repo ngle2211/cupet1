@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+
+import 'components/body.dart';
+import 'components/custom_app_bar.dart';
+
+class AccountScreen extends StatelessWidget {
+  static String routeName = "/account";
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Edit User Information"),
+      ),
+
+      body: Body(),
+    );
+  }
+}
+

@@ -9,6 +9,7 @@ import 'package:cupet/screens/otp/otp_screen.dart';
 import 'package:cupet/screens/profile/profile_screen.dart';
 import 'package:cupet/screens/sign_in/sign_in_screen.dart';
 import 'package:cupet/screens/splash/splash_screen.dart';
+import 'package:cupet/screens/account/account_screen.dart';
 
 import 'screens/sign_up/sign_up_screen.dart';
 
@@ -26,4 +27,5 @@ final Map<String, WidgetBuilder> routes = {
   DetailsScreen.routeName: (context) => DetailsScreen(),
   CartScreen.routeName: (context) => CartScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
+  AccountScreen.routeName: (context) => AccountScreen(),
 };

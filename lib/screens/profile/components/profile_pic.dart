@@ -9,32 +9,32 @@ class ProfilePic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 115,
-      width: 115,
+      height: 150,
+      width: 150,
       child: Stack(
         fit: StackFit.expand,
         overflow: Overflow.visible,
         children: [
-          CircleAvatar(
-            backgroundImage: AssetImage("assets/images/Profile Image.png"),
-          ),
-          Positioned(
-            right: -16,
-            bottom: 0,
-            child: SizedBox(
-              height: 46,
-              width: 46,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  side: BorderSide(color: Colors.white),
-                ),
-                color: Color(0xFFF5F6F9),
-                onPressed: () {},
-                child: SvgPicture.asset("assets/icons/Camera Icon.svg"),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                width: 3,
+                color: Colors.deepOrange,
               ),
+              boxShadow: [
+                BoxShadow(
+                    spreadRadius: 3, blurRadius: 10,
+                    color: Colors.black.withOpacity(0.3),
+                    offset: Offset(0,5)
+                ),
+              ],
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/images/profile_image.jpg")
+              )
             ),
-          )
+          ),
         ],
       ),
     );
