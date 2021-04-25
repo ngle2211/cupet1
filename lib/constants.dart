@@ -48,3 +48,7 @@ OutlineInputBorder outlineInputBorder() {
     borderSide: BorderSide(color: kTextColor),
   );
 }
+
+
+const kDefaultPadding = 20.0;
+const kContentColorLightTheme = Color(0xFF1D1D35);
