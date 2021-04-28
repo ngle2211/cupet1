@@ -12,12 +12,12 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: EdgeInsets.symmetric(vertical: 70),
       child: Column(
         children: [
           ProfilePic(),
           SizedBox(
-              height: 10),
+              height: 15),
           Align(
             alignment: Alignment.center,
             child: Text(
