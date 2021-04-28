@@ -13,7 +13,7 @@ class _ChatPageState extends State<ChatPage> {
     ChatUsers(text: "Kai", secondaryText: "Awesome Setup", image: "assets/images/chat_image1.jpg", time: "Now"),
     ChatUsers(text: "Zero", secondaryText: "That's Great", image: "assets/images/chat_image2.jpg", time: "Yesterday"),
     ChatUsers(text: "Inu", secondaryText: "Hey where are you?", image: "assets/images/chat_image3.jpg", time: "31 Mar"),
-    ChatUsers(text: "Tan", secondaryText: "Busy! Call me in 20 mins", image: "assets/images/chat_image4.jpg", time: "28 Mar"),
+    ChatUsers(text: "Tan", secondaryText: "Busy! Call me in 20 mins", image: "assets/images/chat_image4.jpg", time: "Now"),
     ChatUsers(text: "Gom", secondaryText: "Thank you, It's awesome", image: "assets/images/chat_image5.png", time: "23 Mar"),
   ];
   @override

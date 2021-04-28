@@ -18,11 +18,11 @@ class Body extends StatelessWidget {
                   height: 50,
               ),
           ),
-          buildTextField("Pet Name", "Hank",50),
-          buildTextField("Type", "Dog",50),
-          buildTextField("Breed", "Terrier",50),
-          buildTextField("Description", "Tell something about the pet",300),
-
+          buildTextField("Pet Name", "Hank",null),
+          buildTextField("Type", "Dog",null),
+          buildTextField("Breed", "Terrier",null),
+          buildTextField("Location", "Ho Chi Minh City",null),
+          buildTextField("Description", "Tell something about the pet",500),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,3 +88,10 @@ Widget buildTextField(String labelText, String placeholder, int maxLength){
   );
 }
 
+Widget buildTextField1(String labelText, String placeholder, int maxLength){
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 30.0),
+
+
+  );
+}

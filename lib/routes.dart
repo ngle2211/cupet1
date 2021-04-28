@@ -1,5 +1,6 @@
 import 'package:cupet/screens/chats/chat_screen.dart';
 import 'package:cupet/screens/chats/components/chat_bubble.dart';
+import 'package:cupet/screens/like/like_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:cupet/screens/cart/cart_screen.dart';
 import 'package:cupet/screens/complete_profile/complete_profile_screen.dart';
@@ -31,4 +32,5 @@ final Map<String, WidgetBuilder> routes = {
   ProfileScreen.routeName: (context) => ProfileScreen(),
   AccountScreen.routeName: (context) => AccountScreen(),
   ChatScreen.routeName: (context) => ChatScreen(),
+  LikeScreen.routeName: (context) => LikeScreen()
 };

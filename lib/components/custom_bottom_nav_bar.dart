@@ -1,4 +1,5 @@
 import 'package:cupet/screens/chats/chat_screen.dart';
+import 'package:cupet/screens/like/like_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cupet/screens/home/home_screen.dart';
@@ -17,7 +18,7 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color inActiveIconColor = Color(0xFF939393);
+    final Color inActiveIconColor = Colors.indigo;
 
     return Container(
       padding: EdgeInsets.symmetric(vertical: 14),
@@ -43,7 +44,7 @@ class CustomBottomNavBar extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.pets_rounded,
                   color: MenuState.profile == selectedMenu
-                  ? kPrimaryColor
+                  ? inActiveIconColor
                       : inActiveIconColor,
                 ),
                 onPressed: () =>
@@ -52,16 +53,17 @@ class CustomBottomNavBar extends StatelessWidget {
               IconButton(
                 icon: SvgPicture.asset("assets/icons/Heart Icon.svg",
                   color: MenuState.profile == selectedMenu
-                      ? kPrimaryColor
+                      ? inActiveIconColor
                       : inActiveIconColor,
                 ),
-                onPressed: () {},
+                onPressed: () =>
+                    Navigator.pushNamed(context, LikeScreen.routeName),
               ),
               IconButton(
                 icon: SvgPicture.asset(
                     "assets/icons/Chat bubble Icon.svg",
                   color: MenuState.profile == selectedMenu
-                      ? kPrimaryColor
+                      ? inActiveIconColor
                       : inActiveIconColor,
                 ),
                 onPressed: () =>
@@ -71,7 +73,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 icon: SvgPicture.asset(
                   "assets/icons/User Icon.svg",
                   color: MenuState.profile == selectedMenu
-                      ? kPrimaryColor
+                      ? inActiveIconColor
                       : inActiveIconColor,
                 ),
                 onPressed: () =>

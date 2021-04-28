@@ -13,7 +13,7 @@ class ChatScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       body: ChatPage(),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.message),
     );
   }
 }
