@@ -1,3 +1,4 @@
+import 'package:email_auth/email_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cupet/components/default_button.dart';
 import 'package:cupet/size_config.dart';
@@ -17,7 +18,6 @@ class _OtpFormState extends State<OtpForm> {
   FocusNode pin2FocusNode;
   FocusNode pin3FocusNode;
   FocusNode pin4FocusNode;
-
   @override
   void initState() {
     super.initState();
@@ -107,10 +107,7 @@ class _OtpFormState extends State<OtpForm> {
             ],
           ),
           SizedBox(height: SizeConfig.screenHeight * 0.15),
-          DefaultButton(
-            text: "Continue",
-            press: () {},
-          )
+
         ],
       ),
     );
