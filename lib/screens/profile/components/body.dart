@@ -24,7 +24,7 @@ class Body extends StatelessWidget {
                 "Hank, Dog/Terrier",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5,
                     color: Colors.indigo)),
@@ -38,17 +38,12 @@ class Body extends StatelessWidget {
                 Navigator.pushNamed(context, AccountScreen.routeName),
           ),
           ProfileMenu(
-            text: "Notifications",
-            icon: "assets/icons/Bell.svg",
-            press: () {},
-          ),
-          ProfileMenu(
             text: "Settings",
             icon: "assets/icons/Settings.svg",
             press: () {},
           ),
           ProfileMenu(
-            text: "Help Center",
+            text: "FAQ",
             icon: "assets/icons/Question mark.svg",
             press: () {},
           ),

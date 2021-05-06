@@ -1,3 +1,4 @@
+import 'package:cupet/screens/home/components/widget/bottom_buttons_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -5,7 +6,6 @@ import 'data/users.dart';
 import 'model/user.dart';
 import 'provider/feedback_position_provider.dart';
 import 'widget/user_card_widget.dart';
-
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,32 +17,22 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: buildAppBar(),
-    body: Padding(
-      padding: const EdgeInsets.all(8),
-      child: Column(
-        children: [
-          users.isEmpty
-              ? Text('No more users')
-              : Stack(children: users.map(buildUser).toList()),
-          Expanded(child: Container()),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 70.0),
+          child: Column(
+            children: [
+              users.isEmpty
+                  ? Text('No more users')
+                  : Stack(children: users.map(buildUser).toList()),
+              Expanded(child: Container()),
+              BottomButtonsWidget(),
+              Spacer(),
+            ],
+          ),
+        ),
+      );
 
-        ],
-      ),
-    ),
-  );
 
-  Widget buildAppBar() => AppBar(
-    centerTitle: true,
-    backgroundColor: Colors.transparent,
-    elevation: 0,
-    actions: [
-      Icon(Icons.chat, color: Colors.grey),
-      SizedBox(width: 16),
-    ],
-    leading: Icon(Icons.person, color: Colors.grey),
-    title: FaIcon(FontAwesomeIcons.fire, color: Colors.deepOrange),
-  );
 
   Widget buildUser(User user) {
     final userIndex = users.indexOf(user);
@@ -51,17 +41,17 @@ class _HomePageState extends State<HomePage> {
     return Listener(
       onPointerMove: (pointerEvent) {
         final provider =
-        Provider.of<FeedbackPositionProvider>(context, listen: false);
+            Provider.of<FeedbackPositionProvider>(context, listen: false);
         provider.updatePosition(pointerEvent.localDelta.dx);
       },
       onPointerCancel: (_) {
         final provider =
-        Provider.of<FeedbackPositionProvider>(context, listen: false);
+            Provider.of<FeedbackPositionProvider>(context, listen: false);
         provider.resetPosition();
       },
       onPointerUp: (_) {
         final provider =
-        Provider.of<FeedbackPositionProvider>(context, listen: false);
+            Provider.of<FeedbackPositionProvider>(context, listen: false);
         provider.resetPosition();
       },
       child: Draggable(

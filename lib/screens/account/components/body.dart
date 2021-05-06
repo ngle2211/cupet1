@@ -21,7 +21,6 @@ class Body extends StatelessWidget {
           buildTextField("Pet Name", "Hank",null),
           buildTextField("Type", "Dog",null),
           buildTextField("Breed", "Terrier",null),
-          buildTextField("Location", "Ho Chi Minh City",null),
           buildTextField("Description", "Tell something about the pet",500),
 
           Row(
