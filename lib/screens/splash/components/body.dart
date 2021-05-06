@@ -15,19 +15,9 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
-    {
-      "text": "Welcome to CUPET!",
-      "image": "assets/images/splash1.jpg"
-    },
-    {
-      "text":
-          "We help people conect with store \naround United State of America",
-      "image": "assets/images/splash2.jpg"
-    },
-    {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/splash_3.png"
-    },
+    {"text": "Welcome to CUPET!", "image": "assets/images/splash.jpg"},
+    {"text": "", "image": ""},
+    {"text": "", "image": ""},
   ];
 
   @override
@@ -48,7 +38,8 @@ class _BodyState extends State<Body> {
                 itemCount: splashData.length,
                 itemBuilder: (context, index) => SplashContent(
                   image: splashData[index]["image"],
-                  text: splashData[index]['text'], key: null,
+                  text: splashData[index]['text'],
+                  key: null,
                 ),
               ),
             ),
@@ -67,14 +58,14 @@ class _BodyState extends State<Body> {
                         (index) => buildDot(index: index),
                       ),
                     ),
-                    Spacer(flex: 2),
+                    Spacer(flex: 3),
                     DefaultButton(
                       text: "Continue",
                       press: () {
                         Navigator.pushNamed(context, SignInScreen.routeName);
                       },
                     ),
-                    Spacer(),
+                    Spacer(flex: 3),
                   ],
                 ),
               ),
@@ -85,14 +76,14 @@ class _BodyState extends State<Body> {
     );
   }
 
-  AnimatedContainer buildDot({ int index}) {
+  AnimatedContainer buildDot({int index}) {
     return AnimatedContainer(
       duration: kAnimationDuration,
       margin: EdgeInsets.only(right: 5),
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        color: currentPage == index ? Colors.indigo : Color(0xFFD8D8D8),
         borderRadius: BorderRadius.circular(3),
       ),
     );
