@@ -22,12 +22,15 @@ class Body extends StatelessWidget {
           buildTextField("Type", "Dog",null),
           buildTextField("Breed", "Terrier",null),
           buildTextField("Description", "Tell something about the pet",500),
+          buildSexFormField(),
 
+          SizedBox(height: 40),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
             children: [
               OutlineButton(
-                padding: EdgeInsets.symmetric(horizontal: 50),
+                padding: EdgeInsets.symmetric(horizontal: 30),
                 onPressed: (){},
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
@@ -38,7 +41,7 @@ class Body extends StatelessWidget {
                       color: Colors.black))
               ),
               RaisedButton(
-                  padding: EdgeInsets.symmetric(horizontal: 50),
+                  padding: EdgeInsets.symmetric(horizontal: 40),
                   onPressed: (){},
                   color: Colors.indigo,
                   elevation: 4,
@@ -64,9 +67,8 @@ Widget buildTextField(String labelText, String placeholder, int maxLength){
     child: TextFormField(
       cursorColor:Colors.black,
       maxLength: maxLength,
-
       decoration: InputDecoration(
-          icon: Icon(Icons.pets_rounded),
+          // icon: Icon(Icons.pets_rounded),
           border: OutlineInputBorder(),
           labelText: labelText,
           labelStyle: TextStyle(
@@ -90,7 +92,54 @@ Widget buildTextField(String labelText, String placeholder, int maxLength){
 Widget buildTextField1(String labelText, String placeholder, int maxLength){
   return Padding(
     padding: const EdgeInsets.only(bottom: 30.0),
-
-
+    
   );
 }
+
+int _value = 1;
+
+Widget buildSexFormField(){
+  return Padding(
+      padding: const EdgeInsets.all(0.0),
+      child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 130.0, vertical: 5),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30.0),
+              color: Colors.white,
+              border: Border.all(
+                color: Colors.grey.shade600,
+              )),
+          child: DropdownButton(
+            value: _value,
+            icon: Icon(Icons.arrow_downward),
+            iconSize: 20,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.deepOrange,
+            ),
+            items: [
+              DropdownMenuItem(
+
+                child: Text('Male'),
+                value: 1,
+              ),
+              DropdownMenuItem(
+                child: Text('Female'),
+                value: 2,
+              )
+            ],
+            onChanged: (value) {
+              setState(() {
+                _value = value;
+              });
+            },
+          )
+      )
+  );
+}
+
+void setState(Null Function() param0) {
+}
+
+
